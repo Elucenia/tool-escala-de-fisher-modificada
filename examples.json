@@ -1,0 +1,46 @@
+[
+  {
+    "label": "Sem sangue visível: grau 0",
+    "input": {
+      "grau": "0"
+    },
+    "expected": {
+      "score": 0,
+      "level": "low"
+    },
+    "originalInput": {
+      "grau": "0"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "HSA fina com sangue ventricular: grau 2 (33%)",
+    "input": {
+      "grau": "2"
+    },
+    "expected": {
+      "score": 2,
+      "level": "mid",
+      "verdict": "33%"
+    },
+    "originalInput": {
+      "grau": "2"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "HSA espessa com sangue ventricular: grau 4 (40%)",
+    "input": {
+      "grau": "4"
+    },
+    "expected": {
+      "score": 4,
+      "level": "high",
+      "verdict": "40%"
+    },
+    "originalInput": {
+      "grau": "4"
+    },
+    "expandedZeroOptions": []
+  }
+]

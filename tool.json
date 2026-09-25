@@ -1,0 +1,221 @@
+{
+  "tool": {
+    "id": "escala-de-fisher-modificada",
+    "title": "Escala de Fisher modificada",
+    "short": "Risco de vasoespasmo na hemorragia subaracnóidea",
+    "spec": [
+      "neurocirurgia",
+      "neurologia",
+      "radiologia-e-diagnostico-por-imagem",
+      "medicina-intensiva"
+    ],
+    "desc": "Escala de Fisher modificada (Claassen/Frontera): risco de vasoespasmo sintomático na hemorragia subaracnóidea pela espessura do sangue e pela hemorragia ventricular.",
+    "lead": "Estima o risco de vasoespasmo sintomático na hemorragia subaracnóidea aneurismática a partir da tomografia de admissão.",
+    "fields": [
+      [
+        "grau",
+        "Achado na tomografia de admissão",
+        "sel",
+        {
+          "opts": {
+            "0": "0 – Sem HSA e sem hemorragia intraventricular",
+            "1": "1 – HSA fina (focal ou difusa), sem hemorragia intraventricular",
+            "2": "2 – HSA fina, com hemorragia intraventricular",
+            "3": "3 – HSA espessa (focal ou difusa), sem hemorragia intraventricular",
+            "4": "4 – HSA espessa, com hemorragia intraventricular"
+          }
+        }
+      ]
+    ],
+    "score": {
+      "label": "Fisher modificada",
+      "unit": "de 4",
+      "bands": [
+        [
+          0,
+          "low",
+          "Grau 0: sem sangue subaracnóideo ou ventricular",
+          ""
+        ],
+        [
+          1,
+          "mid",
+          "Grau 1: vasoespasmo sintomático em 24%",
+          ""
+        ],
+        [
+          2,
+          "mid",
+          "Grau 2: vasoespasmo sintomático em 33%",
+          ""
+        ],
+        [
+          3,
+          "mid",
+          "Grau 3: vasoespasmo sintomático em 33%",
+          ""
+        ],
+        [
+          4,
+          "high",
+          "Grau 4: vasoespasmo sintomático em 40%",
+          ""
+        ]
+      ]
+    },
+    "formula": "<p>Classifica a tomografia pela espessura do sangue subaracnóideo e pela presença de sangue nos ventrículos. HSA <strong>espessa</strong> = coágulo que preenche completamente pelo menos uma cisterna ou fissura; fina = não preenche completamente.</p>",
+    "table": [
+      [
+        "Grau",
+        "Achado",
+        "Vasoespasmo sintomático"
+      ],
+      [
+        "0",
+        "Sem HSA nem HIV",
+        "—"
+      ],
+      [
+        "1",
+        "HSA fina, sem HIV",
+        "24%"
+      ],
+      [
+        "2",
+        "HSA fina, com HIV",
+        "33%"
+      ],
+      [
+        "3",
+        "HSA espessa, sem HIV",
+        "33%"
+      ],
+      [
+        "4",
+        "HSA espessa, com HIV",
+        "40%"
+      ]
+    ],
+    "table_note": "HIV = hemorragia intraventricular. Frequências da coorte de Frontera 2006.",
+    "tips": [
+      "Diferente da escala de Fisher original, a modificada considera a hemorragia intraventricular e mostra aumento progressivo do risco entre os graus.",
+      "Use a tomografia das primeiras 24 a 72 h: o sangue é reabsorvido e tomografias tardias subestimam o grau.",
+      "Graus altos pedem vigilância intensiva de vasoespasmo e isquemia cerebral tardia entre o 3º e o 14º dia (exame neurológico seriado, Doppler transcraniano).",
+      "O nimodipino oral é indicado a todos os pacientes com HSA aneurismática, independentemente do grau."
+    ],
+    "sources": [
+      [
+        "Frontera JA et al. Prediction of symptomatic vasospasm after subarachnoid hemorrhage: the modified Fisher scale. Neurosurgery, 2006.",
+        "https://doi.org/10.1227/01.NEU.0000218821.34014.1B"
+      ]
+    ],
+    "cases": [
+      [
+        "Sem sangue visível: grau 0",
+        {
+          "grau": "0"
+        },
+        {
+          "score": 0,
+          "level": "low"
+        }
+      ],
+      [
+        "HSA fina com sangue ventricular: grau 2 (33%)",
+        {
+          "grau": "2"
+        },
+        {
+          "score": 2,
+          "level": "mid",
+          "verdict": "33%"
+        }
+      ],
+      [
+        "HSA espessa com sangue ventricular: grau 4 (40%)",
+        {
+          "grau": "4"
+        },
+        {
+          "score": 4,
+          "level": "high",
+          "verdict": "40%"
+        }
+      ]
+    ],
+    "batch": "neuro-mente",
+    "kind": "Escore",
+    "config": {
+      "unit": "de 4",
+      "label": "Fisher modificada",
+      "fields": [
+        [
+          "grau",
+          "sel",
+          0
+        ]
+      ],
+      "bands": [
+        [
+          0,
+          "low",
+          "Grau 0: sem sangue subaracnóideo ou ventricular",
+          ""
+        ],
+        [
+          1,
+          "mid",
+          "Grau 1: vasoespasmo sintomático em 24%",
+          ""
+        ],
+        [
+          2,
+          "mid",
+          "Grau 2: vasoespasmo sintomático em 33%",
+          ""
+        ],
+        [
+          3,
+          "mid",
+          "Grau 3: vasoespasmo sintomático em 33%",
+          ""
+        ],
+        [
+          4,
+          "high",
+          "Grau 4: vasoespasmo sintomático em 40%",
+          ""
+        ]
+      ]
+    },
+    "areaId": "neuro-mente",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/neuro-mente.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/neuro-mente.php",
+    "sha256": "3ce3a7987a3ec63938e5f21d8d24ec7f7f8880c1b54458ef7046807a89221cac",
+    "bytes": 102818
+  },
+  "clinicalValidation": "not-performed"
+}
