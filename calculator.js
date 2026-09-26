@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-escala-de-fisher-modificada · Elucenia · https://github.com/Elucenia/tool-escala-de-fisher-modificada
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"escala-de-fisher-modificada","title":"Escala de Fisher modificada","fields":[["grau","Achado na tomografia de admissão","sel",{"opts":{"0":"0 – Sem HSA e sem hemorragia intraventricular","1":"1 – HSA fina (focal ou difusa), sem hemorragia intraventricular","2":"2 – HSA fina, com hemorragia intraventricular","3":"3 – HSA espessa (focal ou difusa), sem hemorragia intraventricular","4":"4 – HSA espessa, com hemorragia intraventricular"}}]],"config":{"unit":"de 4","label":"Fisher modificada","fields":[["grau","sel",0]],"bands":[[0,"low","Grau 0: sem sangue subaracnóideo ou ventricular",""],[1,"mid","Grau 1: vasoespasmo sintomático em 24%",""],[2,"mid","Grau 2: vasoespasmo sintomático em 33%",""],[3,"mid","Grau 3: vasoespasmo sintomático em 33%",""],[4,"high","Grau 4: vasoespasmo sintomático em 40%",""]]},"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
