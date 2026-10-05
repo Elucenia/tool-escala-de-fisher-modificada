@@ -1,6 +1,12 @@
 [
   {
-    "label": "Sem sangue visível: grau 0",
+    "id": "escala-de-fisher-modificada",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Sem sangue visível: grau 0",
+    "originalInput": {
+      "grau": "0"
+    },
     "input": {
       "grau": "0"
     },
@@ -8,13 +14,33 @@
       "score": 0,
       "level": "low"
     },
-    "originalInput": {
-      "grau": "0"
+    "recordedResult": {
+      "main": [
+        "0",
+        "de 4"
+      ],
+      "label": "Fisher modificada",
+      "raw": {
+        "score": 0
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "HSA fina com sangue ventricular: grau 2 (33%)",
+    "id": "escala-de-fisher-modificada",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "HSA fina com sangue ventricular: grau 2 (33%)",
+    "originalInput": {
+      "grau": "2"
+    },
     "input": {
       "grau": "2"
     },
@@ -23,13 +49,33 @@
       "level": "mid",
       "verdict": "33%"
     },
-    "originalInput": {
-      "grau": "2"
+    "recordedResult": {
+      "main": [
+        "2",
+        "de 4"
+      ],
+      "label": "Fisher modificada",
+      "raw": {
+        "score": 2
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "HSA espessa com sangue ventricular: grau 4 (40%)",
+    "id": "escala-de-fisher-modificada",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "HSA espessa com sangue ventricular: grau 4 (40%)",
+    "originalInput": {
+      "grau": "4"
+    },
     "input": {
       "grau": "4"
     },
@@ -38,9 +84,23 @@
       "level": "high",
       "verdict": "40%"
     },
-    "originalInput": {
-      "grau": "4"
+    "recordedResult": {
+      "main": [
+        "4",
+        "de 4"
+      ],
+      "label": "Fisher modificada",
+      "raw": {
+        "score": 4
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

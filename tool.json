@@ -3,14 +3,15 @@
     "id": "escala-de-fisher-modificada",
     "title": "Escala de Fisher modificada",
     "short": "Risco de vasoespasmo na hemorragia subaracnóidea",
+    "desc": "Escala de Fisher modificada (Claassen/Frontera): risco de vasoespasmo sintomático na hemorragia subaracnóidea pela espessura do sangue e pela hemorragia ventricular.",
+    "lead": "Estima o risco de vasoespasmo sintomático na hemorragia subaracnóidea aneurismática a partir da tomografia de admissão.",
+    "kind": "Escore",
     "spec": [
       "neurocirurgia",
       "neurologia",
       "radiologia-e-diagnostico-por-imagem",
       "medicina-intensiva"
     ],
-    "desc": "Escala de Fisher modificada (Claassen/Frontera): risco de vasoespasmo sintomático na hemorragia subaracnóidea pela espessura do sangue e pela hemorragia ventricular.",
-    "lead": "Estima o risco de vasoespasmo sintomático na hemorragia subaracnóidea aneurismática a partir da tomografia de admissão.",
     "fields": [
       [
         "grau",
@@ -20,89 +21,14 @@
           "opts": {
             "0": "0 – Sem HSA e sem hemorragia intraventricular",
             "1": "1 – HSA fina (focal ou difusa), sem hemorragia intraventricular",
-            "2": "2 – HSA fina, com hemorragia intraventricular",
+            "2": "2 – Hemorragia intraventricular com HSA ausente ou fina (focal ou difusa)",
             "3": "3 – HSA espessa (focal ou difusa), sem hemorragia intraventricular",
             "4": "4 – HSA espessa, com hemorragia intraventricular"
           }
         }
       ]
     ],
-    "score": {
-      "label": "Fisher modificada",
-      "unit": "de 4",
-      "bands": [
-        [
-          0,
-          "low",
-          "Grau 0: sem sangue subaracnóideo ou ventricular",
-          ""
-        ],
-        [
-          1,
-          "mid",
-          "Grau 1: vasoespasmo sintomático em 24%",
-          ""
-        ],
-        [
-          2,
-          "mid",
-          "Grau 2: vasoespasmo sintomático em 33%",
-          ""
-        ],
-        [
-          3,
-          "mid",
-          "Grau 3: vasoespasmo sintomático em 33%",
-          ""
-        ],
-        [
-          4,
-          "high",
-          "Grau 4: vasoespasmo sintomático em 40%",
-          ""
-        ]
-      ]
-    },
-    "formula": "<p>Classifica a tomografia pela espessura do sangue subaracnóideo e pela presença de sangue nos ventrículos. HSA <strong>espessa</strong> = coágulo que preenche completamente pelo menos uma cisterna ou fissura; fina = não preenche completamente.</p>",
-    "table": [
-      [
-        "Grau",
-        "Achado",
-        "Vasoespasmo sintomático"
-      ],
-      [
-        "0",
-        "Sem HSA nem HIV",
-        "—"
-      ],
-      [
-        "1",
-        "HSA fina, sem HIV",
-        "24%"
-      ],
-      [
-        "2",
-        "HSA fina, com HIV",
-        "33%"
-      ],
-      [
-        "3",
-        "HSA espessa, sem HIV",
-        "33%"
-      ],
-      [
-        "4",
-        "HSA espessa, com HIV",
-        "40%"
-      ]
-    ],
-    "table_note": "HIV = hemorragia intraventricular. Frequências da coorte de Frontera 2006.",
-    "tips": [
-      "Diferente da escala de Fisher original, a modificada considera a hemorragia intraventricular e mostra aumento progressivo do risco entre os graus.",
-      "Use a tomografia das primeiras 24 a 72 h: o sangue é reabsorvido e tomografias tardias subestimam o grau.",
-      "Graus altos pedem vigilância intensiva de vasoespasmo e isquemia cerebral tardia entre o 3º e o 14º dia (exame neurológico seriado, Doppler transcraniano).",
-      "O nimodipino oral é indicado a todos os pacientes com HSA aneurismática, independentemente do grau."
-    ],
+    "formula": "<p>Classifica a tomografia de admissão pela presença e espessura do sangue subaracnóideo (HSA) e pela presença de hemorragia intraventricular (HIV). Grau 0: sem HSA e sem HIV; grau 1: HSA fina sem HIV; grau 2: HIV com HSA ausente ou fina; grau 3: HSA espessa sem HIV; grau 4: HSA espessa com HIV. Em Frontera et al. (2006), os investigadores locais classificaram o sangue como fino ou espesso por impressão global, sem critérios explícitos de espessura. A ferramenta registra o grau selecionado pelo examinador; não interpreta imagens.</p>",
     "sources": [
       [
         "Frontera JA et al. Prediction of symptomatic vasospasm after subarachnoid hemorrhage: the modified Fisher scale. Neurosurgery, 2006.",
@@ -143,51 +69,6 @@
         }
       ]
     ],
-    "kind": "Escore",
-    "config": {
-      "unit": "de 4",
-      "label": "Fisher modificada",
-      "fields": [
-        [
-          "grau",
-          "sel",
-          0
-        ]
-      ],
-      "bands": [
-        [
-          0,
-          "low",
-          "Grau 0: sem sangue subaracnóideo ou ventricular",
-          ""
-        ],
-        [
-          1,
-          "mid",
-          "Grau 1: vasoespasmo sintomático em 24%",
-          ""
-        ],
-        [
-          2,
-          "mid",
-          "Grau 2: vasoespasmo sintomático em 33%",
-          ""
-        ],
-        [
-          3,
-          "mid",
-          "Grau 3: vasoespasmo sintomático em 33%",
-          ""
-        ],
-        [
-          4,
-          "high",
-          "Grau 4: vasoespasmo sintomático em 40%",
-          ""
-        ]
-      ]
-    },
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -196,17 +77,386 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T15:17:41.432Z",
+      "total": 5,
+      "passed": 5,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "d9109696b7dfbec94ba9b0976da36a8680e8dbbca32393e1b8f27073acbc3dad",
+        "total": 5,
+        "sourceContextCount": 10,
+        "expectedEvidence": {
+          "file": "reports/review-20261003/six-classification-peer-expectations-final25.json",
+          "sha256": "f224a891b06428ed29426f073e0cc8d1ad5ad2d56b78646c85243237166bf001"
+        },
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/six-classification-source-oracles-independent-review-final25.json",
+          "sha256": "683814d261c3e6a11e71d38a4a1002c438f4911c020641f8f057e2253fad3afe"
+        },
+        "packagingRequirement": "Copy this complete bank into the fresh tool package; frozen final24 packages do not contain this source evidence."
+      },
+      "scope": "Five unique prior-selected API grade inputs, associated in the test with ten original Table 1 source-feature contexts. Feature-to-grade mapping is done by the independent test, not the tool; no automated CT classifier. Separate reviewed documentary amendment adds no-SAH plus IVH to grade 2 and removes the unsubstantiated complete-cistern definition. Thin/thick remains examiner global impression, not automated image interpretation.",
+      "source": {
+        "tool": "escala-de-fisher-modificada",
+        "url": "https://cmp-manual.wbs.cz/skaly/prediction_of_symptomatic_vasospasm_after_subarachnoid_hemorrhage_-_the_modified_fisher_scale.pdf",
+        "edition": "Frontera2006 original Table1 printed22",
+        "access": "Original-paper mirror PDF Table1/Methods directly read and localp2 visually inspected",
+        "readScope": "Ten source-feature contexts correspond to only five unique prior-selected API grade inputs. No CT-image classification. Table1 includes noSAH+IVH→2; Methods explicitly lacks thin/thick criteria."
+      },
+      "evidencePath": "reports/review-20261003/six-classification-source-oracles-final25-r2.json",
+      "evidenceSha256": "06dd6f382c1dd3555db037b3b35ee7d0e4709207ad0a28df0de64fefc11038e2",
+      "peerEvidencePath": "reports/review-20261003/six-classification-source-oracles-independent-review-final25.json",
+      "peerEvidenceSha256": "683814d261c3e6a11e71d38a4a1002c438f4911c020641f8f057e2253fad3afe",
+      "implementations": [
+        {
+          "file": "apps/website/private/tool-code/escala-de-fisher-modificada/calculator.js",
+          "sha256": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+          "importedAt": "2026-10-04T15:17:36.472Z",
+          "sourceContexts": 10,
+          "distinctApiInputs": 5,
+          "instrumentation": "One readonly internal observer exposed only in VM; original function/config bytes not changed."
+        },
+        {
+          "file": "apps/dashboard/private/tool-code/escala-de-fisher-modificada/calculator.js",
+          "sha256": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+          "importedAt": "2026-10-04T15:17:36.993Z",
+          "sourceContexts": 10,
+          "distinctApiInputs": 5,
+          "instrumentation": "One readonly internal observer exposed only in VM; original function/config bytes not changed."
+        },
+        {
+          "file": "apps/command-center/private/tool-code/escala-de-fisher-modificada/calculator.js",
+          "sha256": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+          "importedAt": "2026-10-04T15:17:37.695Z",
+          "sourceContexts": 10,
+          "distinctApiInputs": 5,
+          "instrumentation": "One readonly internal observer exposed only in VM; original function/config bytes not changed."
+        }
+      ],
+      "documentaryMetadataRebinding": [
+        {
+          "file": "apps/website/private/tool-code/escala-de-fisher-modificada/calculator.js",
+          "beforeHash": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+          "afterHash": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+          "delta": "Single human TOOL option label only; full source reversibly identical otherwise.",
+          "newUniqueInputsReexecuted": 5
+        },
+        {
+          "file": "apps/dashboard/private/tool-code/escala-de-fisher-modificada/calculator.js",
+          "beforeHash": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+          "afterHash": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+          "delta": "Single human TOOL option label only; full source reversibly identical otherwise.",
+          "newUniqueInputsReexecuted": 5
+        },
+        {
+          "file": "apps/command-center/private/tool-code/escala-de-fisher-modificada/calculator.js",
+          "beforeHash": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+          "afterHash": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+          "delta": "Single human TOOL option label only; full source reversibly identical otherwise.",
+          "newUniqueInputsReexecuted": 5
+        }
+      ],
+      "sourceContextCount": 10,
+      "uniqueApiInputCount": 5,
+      "actualAdapterExecutions": 30,
+      "isolatedChromiumExecutions": 10,
+      "qualifications": [
+        "Five unique prior-selected API grade inputs, associated in the test with ten original Table 1 source-feature contexts. Feature-to-grade mapping is done by the independent test, not the tool; no automated CT classifier. Separate reviewed documentary amendment adds no-SAH plus IVH to grade 2 and removes the unsubstantiated complete-cistern definition. Thin/thick remains examiner global impression, not automated image interpretation.",
+        "CIWA4229 patterns are pairwise/boundary/supplemental coverage, not all671088640 possible inputs.",
+        "Fisher10 source-feature contexts map to five unique API grade-code inputs. The feature-to-grade assignment was independently reconstructed from Table1 by the test; it is not implemented as an automated CT classifier.",
+        "WFNS GCS15 plus deficit has no original table assignment and is recorded only as a local-fallback observation.",
+        "Forrest/GOS/Fisher inputs represent classifications selected before use; numeric/code echo is not diagnosis, prognosis, risk calibration or therapeutic approval.",
+        "Original source cases, historical expected values and tolerances remain unchanged.",
+        "Original historical cases, expected values and tolerances remain unchanged. Separate Fisher source-description amendment changes only the explicitly recorded description/formula/version metadata; all clinical/professional/rights/release approval flags remain unchanged. Passed status describes only the named integer/code scope."
+      ],
+      "unresolvedSourceFindings": [],
+      "excludedObservations": [],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "Fisher modificada — Frontera et al., 2006, tabela 1: HSA ausente, fina ou espessa e hemorragia intraventricular; graus 0–4",
+    "implementationVersion": "escala-de-fisher-modificada@native-2026-10-03+08afeac1ce50",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/16823296/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Classifica a tomografia de admissão pela presença e espessura do sangue subaracnóideo (HSA) e pela presença de hemorragia intraventricular (HIV). Grau 0: sem HSA e sem HIV; grau 1: HSA fina sem HIV; grau 2: HIV com HSA ausente ou fina; grau 3: HSA espessa sem HIV; grau 4: HSA espessa com HIV. Em Frontera et al. (2006), os investigadores locais classificaram o sangue como fino ou espesso por impressão global, sem critérios explícitos de espessura. A ferramenta registra o grau selecionado pelo examinador; não interpreta imagens.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "grau",
+            "label": "Achado na tomografia de admissão",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "0 – Sem HSA e sem hemorragia intraventricular",
+              "1": "1 – HSA fina (focal ou difusa), sem hemorragia intraventricular",
+              "2": "2 – Hemorragia intraventricular com HSA ausente ou fina (focal ou difusa)",
+              "3": "3 – HSA espessa (focal ou difusa), sem hemorragia intraventricular",
+              "4": "4 – HSA espessa, com hemorragia intraventricular"
+            }
+          }
+        ],
+        "hash": "a448d3db40e071f499fc0401cdc02c81ddd496315a584212e07203742fc5ce29"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Frontera JA et al. Prediction of symptomatic vasospasm after subarachnoid hemorrhage: the modified Fisher scale. Neurosurgery, 2006.",
+          "url": "https://doi.org/10.1227/01.NEU.0000218821.34014.1B",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Prediction of symptomatic vasospasm after subarachnoid hemorrhage: the modified fisher scale.",
+            "year": "2006",
+            "firstPublicationDate": "2006-07-01",
+            "doi": "10.1227/01.neu.0000243277.86222.6c",
+            "pmid": "16823296",
+            "journal": "Neurosurgery",
+            "authors": "Frontera JA, Claassen J, Schmidt JM, Wartenberg KE, Temes R, Connolly ES, MacDonald RL, Mayer SA."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/16823296/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "a09760c664e8c085360c0aa8e1e3e589dad56518069059052b2909c90808b16c",
+          "matchedBy": "exact-publication-title",
+          "publisherDepositedMetadata": {
+            "title": "Prediction of Symptomatic Vasospasmafter Subarachnoid Hemorrhage: The Modified Fisher Scale",
+            "doi": "10.1227/01.neu.0000218821.34014.1b",
+            "year": 2006,
+            "publisher": "Ovid Technologies (Wolters Kluwer Health)",
+            "journal": "Neurosurgery",
+            "authors": [
+              "Jennifer A. Frontera",
+              "Jan Claassen",
+              "J. Michael Schmidt",
+              "Katja E. Wartenberg",
+              "Richard Temes",
+              "E. Sander Connolly",
+              "R. Loch Macdonald",
+              "Stephan A. Mayer"
+            ],
+            "url": "https://doi.org/10.1227/01.neu.0000218821.34014.1b"
+          },
+          "doiAliasOrMismatchRequiresReview": {
+            "listed": "https://doi.org/10.1227/01.NEU.0000218821.34014.1B",
+            "indexed": "10.1227/01.neu.0000243277.86222.6c",
+            "crossrefListedDoiMetadataRead": true
+          }
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T15:17:41.432Z",
+        "total": 5,
+        "passed": 5,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "d9109696b7dfbec94ba9b0976da36a8680e8dbbca32393e1b8f27073acbc3dad",
+          "total": 5,
+          "sourceContextCount": 10,
+          "expectedEvidence": {
+            "file": "reports/review-20261003/six-classification-peer-expectations-final25.json",
+            "sha256": "f224a891b06428ed29426f073e0cc8d1ad5ad2d56b78646c85243237166bf001"
+          },
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/six-classification-source-oracles-independent-review-final25.json",
+            "sha256": "683814d261c3e6a11e71d38a4a1002c438f4911c020641f8f057e2253fad3afe"
+          },
+          "packagingRequirement": "Copy this complete bank into the fresh tool package; frozen final24 packages do not contain this source evidence."
+        },
+        "scope": "Five unique prior-selected API grade inputs, associated in the test with ten original Table 1 source-feature contexts. Feature-to-grade mapping is done by the independent test, not the tool; no automated CT classifier. Separate reviewed documentary amendment adds no-SAH plus IVH to grade 2 and removes the unsubstantiated complete-cistern definition. Thin/thick remains examiner global impression, not automated image interpretation.",
+        "source": {
+          "tool": "escala-de-fisher-modificada",
+          "url": "https://cmp-manual.wbs.cz/skaly/prediction_of_symptomatic_vasospasm_after_subarachnoid_hemorrhage_-_the_modified_fisher_scale.pdf",
+          "edition": "Frontera2006 original Table1 printed22",
+          "access": "Original-paper mirror PDF Table1/Methods directly read and localp2 visually inspected",
+          "readScope": "Ten source-feature contexts correspond to only five unique prior-selected API grade inputs. No CT-image classification. Table1 includes noSAH+IVH→2; Methods explicitly lacks thin/thick criteria."
+        },
+        "evidencePath": "reports/review-20261003/six-classification-source-oracles-final25-r2.json",
+        "evidenceSha256": "06dd6f382c1dd3555db037b3b35ee7d0e4709207ad0a28df0de64fefc11038e2",
+        "peerEvidencePath": "reports/review-20261003/six-classification-source-oracles-independent-review-final25.json",
+        "peerEvidenceSha256": "683814d261c3e6a11e71d38a4a1002c438f4911c020641f8f057e2253fad3afe",
+        "implementations": [
+          {
+            "file": "apps/website/private/tool-code/escala-de-fisher-modificada/calculator.js",
+            "sha256": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+            "importedAt": "2026-10-04T15:17:36.472Z",
+            "sourceContexts": 10,
+            "distinctApiInputs": 5,
+            "instrumentation": "One readonly internal observer exposed only in VM; original function/config bytes not changed."
+          },
+          {
+            "file": "apps/dashboard/private/tool-code/escala-de-fisher-modificada/calculator.js",
+            "sha256": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+            "importedAt": "2026-10-04T15:17:36.993Z",
+            "sourceContexts": 10,
+            "distinctApiInputs": 5,
+            "instrumentation": "One readonly internal observer exposed only in VM; original function/config bytes not changed."
+          },
+          {
+            "file": "apps/command-center/private/tool-code/escala-de-fisher-modificada/calculator.js",
+            "sha256": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+            "importedAt": "2026-10-04T15:17:37.695Z",
+            "sourceContexts": 10,
+            "distinctApiInputs": 5,
+            "instrumentation": "One readonly internal observer exposed only in VM; original function/config bytes not changed."
+          }
+        ],
+        "documentaryMetadataRebinding": [
+          {
+            "file": "apps/website/private/tool-code/escala-de-fisher-modificada/calculator.js",
+            "beforeHash": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+            "afterHash": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+            "delta": "Single human TOOL option label only; full source reversibly identical otherwise.",
+            "newUniqueInputsReexecuted": 5
+          },
+          {
+            "file": "apps/dashboard/private/tool-code/escala-de-fisher-modificada/calculator.js",
+            "beforeHash": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+            "afterHash": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+            "delta": "Single human TOOL option label only; full source reversibly identical otherwise.",
+            "newUniqueInputsReexecuted": 5
+          },
+          {
+            "file": "apps/command-center/private/tool-code/escala-de-fisher-modificada/calculator.js",
+            "beforeHash": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+            "afterHash": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+            "delta": "Single human TOOL option label only; full source reversibly identical otherwise.",
+            "newUniqueInputsReexecuted": 5
+          }
+        ],
+        "sourceContextCount": 10,
+        "uniqueApiInputCount": 5,
+        "actualAdapterExecutions": 30,
+        "isolatedChromiumExecutions": 10,
+        "qualifications": [
+          "Five unique prior-selected API grade inputs, associated in the test with ten original Table 1 source-feature contexts. Feature-to-grade mapping is done by the independent test, not the tool; no automated CT classifier. Separate reviewed documentary amendment adds no-SAH plus IVH to grade 2 and removes the unsubstantiated complete-cistern definition. Thin/thick remains examiner global impression, not automated image interpretation.",
+          "CIWA4229 patterns are pairwise/boundary/supplemental coverage, not all671088640 possible inputs.",
+          "Fisher10 source-feature contexts map to five unique API grade-code inputs. The feature-to-grade assignment was independently reconstructed from Table1 by the test; it is not implemented as an automated CT classifier.",
+          "WFNS GCS15 plus deficit has no original table assignment and is recorded only as a local-fallback observation.",
+          "Forrest/GOS/Fisher inputs represent classifications selected before use; numeric/code echo is not diagnosis, prognosis, risk calibration or therapeutic approval.",
+          "Original source cases, historical expected values and tolerances remain unchanged.",
+          "Original historical cases, expected values and tolerances remain unchanged. Separate Fisher source-description amendment changes only the explicitly recorded description/formula/version metadata; all clinical/professional/rights/release approval flags remain unchanged. Passed status describes only the named integer/code scope."
+        ],
+        "unresolvedSourceFindings": [],
+        "excludedObservations": [],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+      "documentaryDescriptionAmendment": {
+        "recordedAt": "2026-10-04T15:26:54.676Z",
+        "scope": "Only exact grade 2 descriptor, formula explanation and explicit 2006 Table 1 method version. No-SAH plus IVH alternative included; undocumented complete-cistern criterion removed. Instrument selected-grade echo and all numeric enums preserved.",
+        "authored": {
+          "file": "reports/review-20261003/fisher-2006-source-descriptions-authored-final25.cjs",
+          "sha256": "89aa4e31b1c3f22cfa6c1370bd70f6481bb7ce989a72a649949228d5e0456530"
+        },
+        "independentPeer": {
+          "file": "reports/review-20261003/fisher-source-descriptions-independent-review-final25.json",
+          "sha256": "526cea98cc6a9a93d9b172a9d74c949e4b7276df18a35bc461178bd98f7cc932"
+        },
+        "sourceAccess": [
+          {
+            "url": "https://cmp-manual.wbs.cz/skaly/prediction_of_symptomatic_vasospasm_after_subarachnoid_hemorrhage_-_the_modified_fisher_scale.pdf",
+            "doi": "10.1227/01.NEU.0000218821.34014.1B",
+            "pdfSha256": "774ec41f1ee227654c3b574dce9aea3a015aeaff957508958bfedb7796d8bf61",
+            "readScope": "Original-paper mirror: front-page identity, Methods/Table1 printed22 and Discussion24–25. Locally rendered PDFp2 visually read. No full-method or imaging interpretation approval.",
+            "sourceFindings": [
+              "Table1 includes noSAH+IVH in grade2.",
+              "Methods used global thin/thick impression, without explicit criteria."
+            ],
+            "originalArticleRights": "PDF carries publisher copyright/reproduction notice; no rights approval inferred."
+          }
+        ],
+        "priorFieldsSha256": "cbd0b168024cbd6a4f0d8a4a57884fc00c0d7124d840f07268a62c7148b4a85a",
+        "fieldsSha256": "0549c7e7c6d92c33eb9f1a35ea200871ddadab6ea283c686c55d9eb53f6eb19f",
+        "previousImplementationHash": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+        "implementationHash": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+        "implementationRebindings": [
+          {
+            "file": "apps/website/private/tool-code/escala-de-fisher-modificada/calculator.js",
+            "beforeHash": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+            "afterHash": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+            "delta": "Single human TOOL option label only; full source reversibly identical otherwise.",
+            "newUniqueInputsReexecuted": 5
+          },
+          {
+            "file": "apps/dashboard/private/tool-code/escala-de-fisher-modificada/calculator.js",
+            "beforeHash": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+            "afterHash": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+            "delta": "Single human TOOL option label only; full source reversibly identical otherwise.",
+            "newUniqueInputsReexecuted": 5
+          },
+          {
+            "file": "apps/command-center/private/tool-code/escala-de-fisher-modificada/calculator.js",
+            "beforeHash": "927f9f7919b57218b1f0da80f6f8e1b3043fcc622e43059c3f3c05b269280ada",
+            "afterHash": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+            "delta": "Single human TOOL option label only; full source reversibly identical otherwise.",
+            "newUniqueInputsReexecuted": 5
+          }
+        ],
+        "sourceEditionsPreserved": true,
+        "fullMethodConformance": "not-performed",
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "rightsApproval": "not-performed"
+      }
+    },
+    "limits": "Graduação tomográfica estudada para predizer vasoespasmo sintomático após HSA. O estudo consultado reuniu pacientes dos braços placebo de quatro ensaios. Não confere, por si só, diagnóstico de vasoespasmo, previsão de todos os desfechos ou indicação de tratamento.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.853Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Definição tomográfica integral de coágulo espesso e tabela de graus não foram lidas no artigo integral."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/escala-de-fisher-modificada/calculator.js",
+    "bytes": 4831,
+    "sha256": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "5b04997aa0b771e8a9743c77ea9d9e771899307ab170bcbee7e4ef2baf6151af",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "8cf891b3182b8e2e262dd71a85b02ec24f5d8b90e0b8e7088757577d7742cb74",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "8cf891b3182b8e2e262dd71a85b02ec24f5d8b90e0b8e7088757577d7742cb74",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }
