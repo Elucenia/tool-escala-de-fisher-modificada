@@ -61,3 +61,22 @@ Resultado da fórmula ou classificação. Interpretação, conduta e aplicabilid
 Apache-2.0 aplica-se somente ao código da ELUCENIA. Os instrumentos, publicações, traduções e dados mantêm os direitos dos respectivos titulares. Preserve LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+As informações abaixo preservam as saídas do método para exemplos sintéticos. Não constituem validação clínica independente.
+
+### 1
+
+Grau 0: sem sangue subaracnóideo ou ventricular
+
+
+### 2
+
+Grau 2: vasoespasmo sintomático em 33%
+
+
+### 3
+
+Grau 4: vasoespasmo sintomático em 40%
+

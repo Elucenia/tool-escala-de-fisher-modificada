@@ -182,7 +182,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "Fisher modificada — Frontera et al., 2006, tabela 1: HSA ausente, fina ou espessa e hemorragia intraventricular; graus 0–4",
-    "implementationVersion": "escala-de-fisher-modificada@native-2026-10-03+08afeac1ce50",
+    "implementationVersion": "escala-de-fisher-modificada@native-2026-10-05+0996f077b0e4",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/16823296/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -364,7 +364,7 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+      "implementationHash": "0996f077b0e4a78f3be88de0db756387927bbf276fa36db884b55ddc4e22e052",
       "documentaryDescriptionAmendment": {
         "recordedAt": "2026-10-04T15:26:54.676Z",
         "scope": "Only exact grade 2 descriptor, formula explanation and explicit 2006 Table 1 method version. No-SAH plus IVH alternative included; undocumented complete-cistern criterion removed. Instrument selected-grade echo and all numeric enums preserved.",
@@ -421,7 +421,35 @@
         "clinicalApproval": "not-performed",
         "professionalLanguageApproval": "not-performed",
         "rightsApproval": "not-performed"
-      }
+      },
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "escala-de-fisher-modificada@native-2026-10-03+08afeac1ce50",
+          "previousImplementationHash": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+          "implementationHash": "0996f077b0e4a78f3be88de0db756387927bbf276fa36db884b55ddc4e22e052",
+          "scientificBodySha256": "e85276683115c11c8a08c490b617391606f7137a1aaae50779ecc2e6796ea25d",
+          "metadataContractHash": "a448d3db40e071f499fc0401cdc02c81ddd496315a584212e07203742fc5ce29",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "Graduação tomográfica estudada para predizer vasoespasmo sintomático após HSA. O estudo consultado reuniu pacientes dos braços placebo de quatro ensaios. Não confere, por si só, diagnóstico de vasoespasmo, previsão de todos os desfechos ou indicação de tratamento.",
     "sourceLimitEvidence": {
@@ -440,20 +468,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/escala-de-fisher-modificada/calculator.js",
-    "bytes": 4831,
-    "sha256": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8"
+    "bytes": 5036,
+    "sha256": "0996f077b0e4a78f3be88de0db756387927bbf276fa36db884b55ddc4e22e052"
   },
-  "sourceToolSha256": "5b04997aa0b771e8a9743c77ea9d9e771899307ab170bcbee7e4ef2baf6151af",
+  "sourceToolSha256": "8af6d1149ab0f063f5e1bb32227c02aa3bbe7be14a678d4e540df4cbca8fff5f",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "8cf891b3182b8e2e262dd71a85b02ec24f5d8b90e0b8e7088757577d7742cb74",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "8cf891b3182b8e2e262dd71a85b02ec24f5d8b90e0b8e7088757577d7742cb74",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

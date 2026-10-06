@@ -1,0 +1,159 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "escala-de-fisher-modificada",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "f7a83a866c99ff6a50e0b619be745c9c00f76a3c",
+    "oldEngineSha256": "08afeac1ce505de0fa247192d202470ded334535e6278417b87ad9f4757795a8",
+    "currentEngineSha256": "0996f077b0e4a78f3be88de0db756387927bbf276fa36db884b55ddc4e22e052"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Sem sangue visível: grau 0",
+      "input": {
+        "grau": "0"
+      },
+      "publicOutput": {
+        "id": "escala-de-fisher-modificada",
+        "main": [
+          "0",
+          "de 4"
+        ],
+        "label": "Fisher modificada",
+        "raw": {
+          "score": 0
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 0,
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "0",
+          "de 4"
+        ],
+        "label": "Fisher modificada",
+        "level": "low",
+        "verdict": "Grau 0: sem sangue subaracnóideo ou ventricular",
+        "note": "",
+        "raw": {
+          "score": 0
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "HSA fina com sangue ventricular: grau 2 (33%)",
+      "input": {
+        "grau": "2"
+      },
+      "publicOutput": {
+        "id": "escala-de-fisher-modificada",
+        "main": [
+          "2",
+          "de 4"
+        ],
+        "label": "Fisher modificada",
+        "raw": {
+          "score": 2
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 2,
+        "level": "mid",
+        "verdict": "33%"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "2",
+          "de 4"
+        ],
+        "label": "Fisher modificada",
+        "level": "mid",
+        "verdict": "Grau 2: vasoespasmo sintomático em 33%",
+        "note": "",
+        "raw": {
+          "score": 2
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "HSA espessa com sangue ventricular: grau 4 (40%)",
+      "input": {
+        "grau": "4"
+      },
+      "publicOutput": {
+        "id": "escala-de-fisher-modificada",
+        "main": [
+          "4",
+          "de 4"
+        ],
+        "label": "Fisher modificada",
+        "raw": {
+          "score": 4
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 4,
+        "level": "high",
+        "verdict": "40%"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "4",
+          "de 4"
+        ],
+        "label": "Fisher modificada",
+        "level": "high",
+        "verdict": "Grau 4: vasoespasmo sintomático em 40%",
+        "note": "",
+        "raw": {
+          "score": 4
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    }
+  ]
+}

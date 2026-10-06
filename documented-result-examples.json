@@ -1,0 +1,387 @@
+{
+  "id": "escala-de-fisher-modificada",
+  "implementationVersion": "escala-de-fisher-modificada@native-2026-10-05+0996f077b0e4",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Sem sangue visível: grau 0",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grau 0: sem sangue subaracnóideo ou ventricular",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "HSA fina com sangue ventricular: grau 2 (33%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grau 2: vasoespasmo sintomático em 33%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "HSA espessa com sangue ventricular: grau 4 (40%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grau 4: vasoespasmo sintomático em 40%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Sem sangue visível: grau 0",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grade 0: no subarachnoid or ventricular blood",
+            "locale": "en",
+            "template": "documented-authored-12812d05327d145f3017"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "HSA fina com sangue ventricular: grau 2 (33%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grade 2: symptomatic vasospasm in 33%",
+            "locale": "en",
+            "template": "documented-authored-ab2a9f67dee32a75f506"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "HSA espessa com sangue ventricular: grau 4 (40%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grade 4: symptomatic vasospasm in 40%",
+            "locale": "en",
+            "template": "documented-authored-9f3d4bdd7b8b7c7ab3f6"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Sem sangue visível: grau 0",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grado 0: sin sangre subaracnoidea o ventricular",
+            "locale": "es",
+            "template": "documented-authored-12812d05327d145f3017"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "HSA fina com sangue ventricular: grau 2 (33%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grado 2: vasoespasmo sintomático en 33%",
+            "locale": "es",
+            "template": "documented-authored-ab2a9f67dee32a75f506"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "HSA espessa com sangue ventricular: grau 4 (40%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grado 4: vasoespasmo sintomático en 40%",
+            "locale": "es",
+            "template": "documented-authored-9f3d4bdd7b8b7c7ab3f6"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Sem sangue visível: grau 0",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grade 0 : pas de sang sous-arachnoïdien ou intraventriculaire",
+            "locale": "fr",
+            "template": "documented-authored-12812d05327d145f3017"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "HSA fina com sangue ventricular: grau 2 (33%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grade 2 : vasospasme symptomatique dans 33%",
+            "locale": "fr",
+            "template": "documented-authored-ab2a9f67dee32a75f506"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "HSA espessa com sangue ventricular: grau 4 (40%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grade 4 : vasospasme symptomatique dans 40%",
+            "locale": "fr",
+            "template": "documented-authored-9f3d4bdd7b8b7c7ab3f6"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Sem sangue visível: grau 0",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grad 0: kein subarachnoidales oder ventrikuläres Blut",
+            "locale": "de",
+            "template": "documented-authored-12812d05327d145f3017"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "HSA fina com sangue ventricular: grau 2 (33%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grad 2: symptomatischer Vasospasmus in 33%",
+            "locale": "de",
+            "template": "documented-authored-ab2a9f67dee32a75f506"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "HSA espessa com sangue ventricular: grau 4 (40%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grad 4: symptomatischer Vasospasmus in 40%",
+            "locale": "de",
+            "template": "documented-authored-9f3d4bdd7b8b7c7ab3f6"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Sem sangue visível: grau 0",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grado 0: nessun sangue subaracnoideo o ventricolare",
+            "locale": "it",
+            "template": "documented-authored-12812d05327d145f3017"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "HSA fina com sangue ventricular: grau 2 (33%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grado 2: vasospasmo sintomatico nel 33%",
+            "locale": "it",
+            "template": "documented-authored-ab2a9f67dee32a75f506"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "HSA espessa com sangue ventricular: grau 4 (40%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Grado 4: vasospasmo sintomatico nel 40%",
+            "locale": "it",
+            "template": "documented-authored-9f3d4bdd7b8b7c7ab3f6"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Sem sangue visível: grau 0",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "الدرجة 0: لا يوجد دم تحت العنكبوتية أو بطيني",
+            "locale": "ar",
+            "template": "documented-authored-12812d05327d145f3017"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "HSA fina com sangue ventricular: grau 2 (33%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "الدرجة 2: تشنج وعائي عرضي في 33%",
+            "locale": "ar",
+            "template": "documented-authored-ab2a9f67dee32a75f506"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "HSA espessa com sangue ventricular: grau 4 (40%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "الدرجة 4: تشنج وعائي عرضي في 40%",
+            "locale": "ar",
+            "template": "documented-authored-9f3d4bdd7b8b7c7ab3f6"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Sem sangue visível: grau 0",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "0级：无蛛网膜下腔或脑室内出血",
+            "locale": "zh",
+            "template": "documented-authored-12812d05327d145f3017"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "HSA fina com sangue ventricular: grau 2 (33%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "2级：33% 出现有症状的血管痉挛",
+            "locale": "zh",
+            "template": "documented-authored-ab2a9f67dee32a75f506"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "HSA espessa com sangue ventricular: grau 4 (40%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "4级：40% 出现有症状的血管痉挛",
+            "locale": "zh",
+            "template": "documented-authored-9f3d4bdd7b8b7c7ab3f6"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Sem sangue visível: grau 0",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "グレード0：くも膜下腔内または脳室内の血液なし",
+            "locale": "ja",
+            "template": "documented-authored-12812d05327d145f3017"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "HSA fina com sangue ventricular: grau 2 (33%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "グレード2：33%で症候性血管攣縮",
+            "locale": "ja",
+            "template": "documented-authored-ab2a9f67dee32a75f506"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "HSA espessa com sangue ventricular: grau 4 (40%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "グレード4：40%で症候性血管攣縮",
+            "locale": "ja",
+            "template": "documented-authored-9f3d4bdd7b8b7c7ab3f6"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Sem sangue visível: grau 0",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ग्रेड 0: कोई सबरैक्नॉइड या वेंट्रिकुलर रक्त नहीं",
+            "locale": "hi",
+            "template": "documented-authored-12812d05327d145f3017"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "HSA fina com sangue ventricular: grau 2 (33%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ग्रेड 2: 33% में लक्षणात्मक वासोस्पाज़्म",
+            "locale": "hi",
+            "template": "documented-authored-ab2a9f67dee32a75f506"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "HSA espessa com sangue ventricular: grau 4 (40%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ग्रेड 4: 40% में लक्षणात्मक वासोस्पाज़्म",
+            "locale": "hi",
+            "template": "documented-authored-9f3d4bdd7b8b7c7ab3f6"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}
